@@ -149,3 +149,10 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Static files
+static/
+
+
+db.sqlite3
+

@@ -15,7 +15,7 @@ export class AppComponent {
 
   constructor (private timeService: TimeService) {
     this.title = 'App Title';
-    this.greetings = 'Hello';
+    this.greetings = 'Massimo';
     this.lastMessage = 'N.A.';
   }
 
