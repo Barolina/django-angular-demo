@@ -1,12 +1,11 @@
 # django-angular-demo
-Simple Project with Django and Angular2 working
-
-First to start it's important to say that the best way to make Django and Angular2 work toghether is to serve the angular app as static resource in the web server and the django app with the wsgi engine.
-In a UNIX environment a good solution would be use `nginx` as web server and `uWSGI` or `gunicorn` for the django part.
-
-This example is a way to use the django embedded web server to play with both.
+Simple Project with Django and Angular2 working inside a Docker container
 
 ## Installation
+
+### Docker 
+
+Install Docker and start it
 
 ### Django side
 
@@ -66,42 +65,21 @@ os: darwin x64
 The last step is to install the node_modules required
 
 ```
-$ cd <path>/django-angular-demo/my_project/web_app
-$ nom install
+$ cd <path>/django-angular-demo/webapp
+$ npm install
 ```
 
 Now the dev environment is ready, Let's play
 
 ## Deploy and start
 
-Apply the first Django migrations
-
+First build the angular app
 ```
-(.virtualenv) $ cd <path>/django-angular-demo/my_project
-(.virtualenv) $ python manage.py migrate
-```
-
-Then build and deploy the web application with the command
-
-```
-(.virtualenv) $ sh build_and_deploy.sh
+$ cd <path>/django-angular-demo/webapp
+$ ng build
 ```
 
-The script also collects all django static files (for instance the admin/ application)
 
-Finally you can run
+Now point your browser to `http://127.0.0.1:8090/` and .... TADA!!!
 
-```
-(.virtualenv) $ python manage.py runserver
-Performing system checks...
-
-System check identified no issues (0 silenced).
-October 14, 2016 - 20:44:55
-Django version 1.10.2, using settings 'my_project.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-```
-
-Now point your browser to `http://127.0.0.1:8000/` and .... TADA!!!
-
-![Imgur](http://i.imgur.com/M4KGGJu.png)
+![Imgur](http://i.imgur.com/80vWk0w.png)
