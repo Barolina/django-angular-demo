@@ -158,3 +158,4 @@ db.sqlite3
 
 tags
 server/.virtualenv
+pg_data

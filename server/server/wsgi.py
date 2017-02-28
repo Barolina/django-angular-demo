@@ -1,5 +1,5 @@
 """
-WSGI config for mcmitalia project.
+WSGI config for demo app project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
