@@ -1,26 +1,26 @@
 {
   "project": {
-    "version": "1.0.0-beta.14",
-    "name": "web-app"
+    "version": "1.0.0-beta.22-1",
+    "name": "webapp"
   },
   "apps": [
     {
       "root": "src",
-      "outDir": "static",
-      "assets": "assets",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
       "index": "index.html",
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
+      "prefix": "app",
       "mobile": false,
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
         "styles.css"
       ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js"
-      ],
+      "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
@@ -42,6 +42,18 @@
   },
   "defaults": {
     "styleExt": "css",
-    "prefixInterfaces": false
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
   }
 }

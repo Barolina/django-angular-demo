@@ -1,10 +1,10 @@
-import { WebAppPage } from './app.po';
+import { WebappPage } from './app.po';
 
-describe('web-app App', function() {
-  let page: WebAppPage;
+describe('webapp App', function() {
+  let page: WebappPage;
 
   beforeEach(() => {
-    page = new WebAppPage();
+    page = new WebappPage();
   });
 
   it('should display message saying app works', () => {
