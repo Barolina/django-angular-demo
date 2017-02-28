@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  web_dev:
+    build:
+        context: .
+        dockerfile: Dockerfile
+
+    depends_on: 
+      - db
+
+    ports:
+      - "8090:80"
+
+    volumes: 
+        - ./webapp:/home/app/code/webapp:ro
+        - ./server:/home/app/code/server
+
+  db:
+    build:
+      context: ./docker-files/db
+
+    ports:
+      - "7432:5432"
+
+    volumes: 
+      - ./pg_data:/var/lib/postgresql/data
+

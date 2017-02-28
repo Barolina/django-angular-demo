@@ -1,0 +1,5 @@
+*.pyc
+.virtualenv/
+db.sqlite3
+.cache/
+

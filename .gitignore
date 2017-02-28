@@ -157,3 +157,4 @@ static/
 db.sqlite3
 
 tags
+server/.virtualenv
